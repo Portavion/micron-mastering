@@ -3,6 +3,13 @@
     --logo-padding-left: 2vw;
 
     --header-padding-right: 2vw;
+
+    --hero-padding-left: 10vw;
+    --hero-padding-right: 10vw;
+
+    --color-1: #53595a;
+    --color-2: #859fa1;
+    --color-3: #98babc;
 }
 
 
@@ -10,12 +17,16 @@ body {
     margin: 0;
     padding: 0;
 }
+
 .logo-container, .menu-container, header{
     display: flex;
 }
 
 header {
     justify-content: space-between;
+
+    background-color: var(--color-1);
+    color: var(--color-2);
 }
 
 .logo-container {
@@ -27,8 +38,32 @@ header {
 
 .menu-container {
     padding-right: var(--header-padding-right);
+    margin-top: auto;
+    margin-bottom: auto;
 
     gap: var(--header-padding-right);
-
 }
+
+.hero {
+    background-color: var(--color-3);
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero-left, .hero-image {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+}
+
+.hero-left{
+    padding-left: var(--hero-padding-left);
+}
+
+.hero-image {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
 
