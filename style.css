@@ -1,4 +1,34 @@
+:root {
+
+    --logo-padding-left: 2vw;
+
+    --header-padding-right: 2vw;
+}
+
+
 body {
     margin: 0;
     padding: 0;
 }
+.logo-container, .menu-container, header{
+    display: flex;
+}
+
+header {
+    justify-content: space-between;
+}
+
+.logo-container {
+    flex-direction: column;
+    align-items: center;
+    
+    padding-left: var(--logo-padding-left);
+}
+
+.menu-container {
+    padding-right: var(--header-padding-right);
+
+    gap: var(--header-padding-right);
+
+}
+
