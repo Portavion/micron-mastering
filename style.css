@@ -10,6 +10,9 @@
     --color-1: #53595a;
     --color-2: #859fa1;
     --color-3: #98babc;
+    --color-white: white;
+
+    --box-shadow-button: 0 4px 6px -1px rgb(0 0 0 / 0.2), 0 2px 4px -2px rgb(0 0 0 / 0.2);
 }
 
 
@@ -25,16 +28,24 @@ body {
 
 header {
     justify-content: space-between;
-
+    align-items: center;
+    height: 10vh;
     background-color: var(--color-1);
     color: var(--color-2);
 }
 
+.micron-logo {
+    width: 100px;
+}
+
 .logo-container {
-    flex-direction: column;
+    display: flex;
+
+    justify-content: center;
     align-items: center;
     
-    padding-left: var(--logo-padding-left);
+    gap: 50px;
+    height: 5vh;
 }
 
 .menu-container {
@@ -46,25 +57,78 @@ header {
 }
 
 .hero {
-    background-color: var(--color-3);
-    display: flex;
-    justify-content: space-between;
+    background-color: rgb(161, 161, 161);
+    background-blend-mode: multiply;
+    background-image: url(studio-pic.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    display: grid;
+    height: 70vh;
+    grid-template-rows: 2fr 2fr 1fr;
 }
 
-.hero-left, .hero-image {
+.hero-text, .hero-small-text {
+    color: var(--color-white);
+}
+
+.hero-text {
+    font-size: 54px;
+    font-weight: 550;
+    width: 40vw;
+    text-align: center;
+
+    justify-self: center;
+    align-self: center;
+}
+
+.hero-small-text{
+    font-size: 24px;
+    font-weight: 100;
+    width: 50vw;
+    
+
+    justify-self: center;
+    align-self: center;
+}
+
+.logo{
+    width: 100px;
+}
+
+.sony{
+    width: 60px;
+}
+
+.logo-rec-container {
     display: flex;
-    flex-direction: column;
-    flex: 1;
+
+    justify-content: center;
     align-items: center;
-}
-
-.hero-left{
-    padding-left: var(--hero-padding-left);
-}
-
-.hero-image {
+    
     margin-top: auto;
     margin-bottom: auto;
+
+    gap: 50px;
+    height: 5vh
 }
 
+.button-1 {
+    width: 80px;
+    height: 20px;
 
+    justify-self: center;
+    align-self: center;
+
+    background-color: var(--color-3);
+    border-radius: 5px;
+    border: none;
+
+    color: var(--color-white);
+
+    box-shadow: var(--box-shadow-button);
+}
+
+.filter-white {
+    filter: invert(100%) sepia(95%) saturate(0%) hue-rotate(109deg) brightness(105%) contrast(105%);
+}
